@@ -13,6 +13,8 @@ namespace Prova_liveshare
         public DbSet<Attivita> Attivita { get; set; }
         public DbSet<Utente> Utente { get; set; }
 
+        public DbSet<ListaAttivita> ListaAttivita { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {

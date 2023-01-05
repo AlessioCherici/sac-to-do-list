@@ -26,6 +26,9 @@ namespace Prova_liveshare
         [Column("numero_telefono")]
         public string NumeroTelefonoUtente { get; set; }
 
+        //relazione 1 a molti con attività
+        public List<Attivita> Attivita { get; set; } = new List<Attivita>();
+
         public Utente()
         {
 

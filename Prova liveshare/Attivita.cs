@@ -16,10 +16,15 @@ namespace Prova_liveshare
         [Required]
         public string Nome { get; set; }
         public string Stato { get; set; }
+        
+        //relazione 1 a molti con utente
         public Utente Utente { get; set; } //nuova Classe
         public int IdUtente { get; set; }
+        
         public string Descrizione { get; set; }
         public DateTime DataAttivita { get; set; }
+
+
 
         //costruttori
         public Attivita()
