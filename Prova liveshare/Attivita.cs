@@ -95,13 +95,13 @@ namespace Prova_liveshare
             bool res = DateTime.Equals(DataAttivita, today);
             if (res)
                 {
-                Console.WriteLine("\n" + Nome + "\n" + Stato + "\n" + Descrizione + "\n" +Creatore+ "\n" + DataAttivita);
+                Console.WriteLine("\n" + Nome + "\n" + Stato + "\n" + Descrizione + "\n" +Creatore+ "\n" + DataAttivita.ToString("dd/MM/yyyy"));
                 }
             }
 
         public override string ToString()
             {
-            return "\n" + "Nome dell'attività: " + Nome + "\nStato: " + Stato + "\nDescrizione: " + Descrizione + "\nNome del Creatore: " + Creatore + "\nData attività: " +  DataAttivita;
+            return "\n" + "Nome dell'attività: " + Nome + "\nStato: " + Stato + "\nDescrizione: " + Descrizione + "\nNome del Creatore: " + Creatore + "\nData attività: " +  DataAttivita.ToString("dd/MM/yyyy");
             }
 
         }

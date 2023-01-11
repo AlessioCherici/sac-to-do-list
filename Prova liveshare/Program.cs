@@ -1,7 +1,7 @@
 ﻿
 using Prova_liveshare;
 bool chiudiProgramma = true;
-Console.WriteLine("Manager eventi      Copyright Nikola Krstevski 1995 :)");
+Console.WriteLine("Manager eventi      Copyright Nikola Krstevski S.R.L. 1995 :)");
 while (chiudiProgramma)
 {
     Console.WriteLine();
@@ -20,7 +20,7 @@ while (chiudiProgramma)
     switch (menu)
     {
         case 1:
-            Console.WriteLine("Lista delle attività inserite:");
+            Console.WriteLine("Lista delle attività inserite: ");
 
             using (TodoListDbContext db = new TodoListDbContext())
             {
@@ -126,7 +126,7 @@ while (chiudiProgramma)
                 List<Attivita> listaAttivita = db.Attivita.ToList();
 
                 Console.WriteLine();
-                Console.WriteLine("lista delle attività:");
+                Console.WriteLine("lista delle attività: ");
                 foreach (Attivita attivita in listaAttivita)
                 {
                     Console.WriteLine(listaAttivita.IndexOf(attivita) + " - " + attivita.Nome);
@@ -161,7 +161,7 @@ while (chiudiProgramma)
                   select lista).ToList<Attivita>();
 
                 Console.WriteLine();
-                Console.WriteLine("lista delle attività:");
+                Console.WriteLine("lista delle attività: ");
                 foreach (Attivita attivita in listaAttivita)
                 {
                     Console.WriteLine(listaAttivita.IndexOf(attivita) + " - " + attivita.Nome);
@@ -188,9 +188,18 @@ while (chiudiProgramma)
 
                 foreach (Attivita attivita in listaAttivita)
                 {
+                    int counter = 0;
                     if (attivita.Stato == "da fare")
                     {
+
+                        counter++;
                         Console.WriteLine(attivita);
+                        if (counter == 2)
+                        {
+                            Console.WriteLine();
+                            Console.WriteLine("---------------------------------------------------------------------------");
+                            counter = 0;
+                        }
                     }
                 }
             }
